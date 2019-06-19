@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ELEMENTS</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/scripts/scripts.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="dropbtn"></button>
+        <div class="dropdown-content">
+            <a href="/">view <br>elements</a>
+            <a href="/login">your <br> page</a>
+            <a href="/register"></a>
+        </div>
+    </div>
+    <div class="content">
+        <form method="POST" action="/register" class="form-container">
+            <h1>hi there</h1>
+            <!-- <p>Fill in your information and gain access to our super secret and informative site</p> -->
+
+            <% if(locals.errorMessage){%>
+            <%errorMessage.forEach(error => {%>
+            <div class='error-msg'>
+                <%=error.msg%>
+            </div>
+            <%})%>
+            <%}%>
+
+                <hr>
+                <label for="username"><b>Username</b></label>
+                <input type="text" name="username" placeholder="Choose Username" autocomplete="off" >
+                <label for="email"><b>Email</b></label>
+                <input type="email" name="email" placeholder="Enter Email" autocomplete="off">
+                <label for="password"><b>Password</b></label>
+                <input type="password" name="password" placeholder="Choose Password" autocomplete="off" >
+                <hr>
+                <div>
+                    <input class="form-button register" type="submit" value="Register">
+                    <a href="/login"><input class="form-button member" type="button"
+                            value="Already a member? Login"></a>
+                </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

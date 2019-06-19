@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ELEMENTS</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/scripts/scripts.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <button class="dropbtn"></button>
+        <div class="dropdown-content">
+            <a href="/profile"></a>
+            <a href="/logout">logout</a>
+        </div>
+    </div>
+
+    <div class="myBtnContainer">
+        <button class="btn_class_more" onclick="filterSelection('collection')"> my collection</button>
+        <button class="btn_class_more" onclick="filterSelection('searchmore')">view more</button>
+    </div>
+
+    <div>
+        <div class="row">
+            <div class="content">
+                <div class="column collection">
+                    <%if(typeof snippet === "undefined"){%>
+                    <p>collection is empty</p>
+                    <%} else {%>
+                    <p><%= snippet.snippet%> </p>
+                    <%}%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class='flexcontainer'>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet1"><img src="snippet1.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column  searchmore"><a href="/snippet2"><img src="snippet2.gif"></a></div>
+                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column  searchmore"><a href="/snippet3"><img src="snippet3.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet4"><img src="snippet4.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet5"><img src="snippet5.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet6"><img src="snippet6.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet7"><img src="snippet7.gif"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet8"><img src="snippet2.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet9"><img src="snippet3.gif"></a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="column searchmore"><a href="/snippet10"><img src="snippet2.gif"></a></div>
+                            </div>
+                        </div>
+                
+                
+                    </div>
+</body>
+
+</html>
